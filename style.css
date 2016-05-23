@@ -1,12 +1,44 @@
 body {
 	font: normal 15px/15px Helvetica;
-	background: #259286;
+	margin: 0 auto;
+    background-image: url("images/wallpaper.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img {
+	width: 60px;
+	height: 60px;
+}
+
+#play {
+	background-color: white;
+	width: 60px;
+	height: 60px;
+}
+
+#pause {
+	background-color: white;
+	width: 60px;
+	height: 60px;
+}
+
+#next {
+	background-color: white;
+	width: 60px;
+	height: 60px;
+}
+
+#back {
+	background-color: white;
+	width: 60px;
+	height: 60px;
 }
 
 ul.player {
-	width: 180px;
+	width: 250px;
 	margin: 0 auto;
-	margin-top: 100px;
+	margin-top: 150px;
 	list-style: none;
 }
 
@@ -14,9 +46,10 @@ ul.player li {
 	border-bottom: 1px solid #999;
 	color: #444;
 	padding: 9px 5px 10px 40px;
-	background-color: #EAE3CB;
+	background-color: #D6AA07;
 	background-position: 9px 4px;
 	cursor: pointer;
+	opacity: 0.8;
 }
 
 ul.player li:first-child {
@@ -32,20 +65,23 @@ ul.player li:last-child {
 }
 
 ul.player li:hover {
-	background-color: #475B62;
-	color: #FCF4DC;
+	background-color: #6DA0C4;
+	color: white;
+	opacity: 0.7;
 }
 
 ul.player li#playing {
-	background: url(images/media_play_btn.png) no-repeat 8px 7px;
-	background-color: #FCF4DC;
-	color: #2176C7;
+	background: url("images/pause.png") no-repeat;
+	background-size: 30px 30px;
+	background-color: #636753;
+	color: white;
 	font-weight: bold;
 	background-position: 9px 4px;
 }
 
 ul.player li#paused {
-	background: url(images/media_pause_btn.png) no-repeat 8px 7px;
+	background: url("images/play.png") no-repeat;
+	background-size: 30px 30px;
 	background-color: #666;
 	color: #FFF;
 	font-weight: bold;

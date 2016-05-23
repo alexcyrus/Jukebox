@@ -6,12 +6,17 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<div id="play"><img src="images/play.png"></div>
+	<div id="pause"><img src="images/pause.png"></div>
+	<div id="next"><img src="images/next.png"></div>
+	<div id="back"><img src="images/back.png"></div>
+	<audio id="audio" src=""></audio>
 	<ul class="player">
-		<li data-src="songs/Doctor P - Tetris.mp3">Doctor P - Tetris</li>
-		<li data-src="songs/Deadmau5 - I Remember.mp3">Deadmau5 - I Remember</li>
-		<li data-src="songs/Tiesto - Red Lights.mp3">Tiesto - Red Lights</li>
-		<li data-src="songs/Chela - Zero (Keljet Remix).mp3">Chela - Zero (Keljet Remix)</li>
-		<li data-src="songs/Avicii - Wake Me Up.mp3">Avicii - Wake Me Up</li>
+		<li data-src="songs/Doctor P - Tetris.mp3" onclick="my_jukebox.selectPlay(0)">1. Doctor P - Tetris</li>
+		<li data-src="songs/Tiesto - Red Lights.mp3" onclick="my_jukebox.selectPlay(1)">2.	Tiesto - Red Lights</li>
+		<li data-src="songs/Deadmau5 - I Remember.mp3" onclick="my_jukebox.selectPlay(2)">3. Deadmau5 - I Remember</li>
+		<li data-src="songs/Chela - Zero (Keljet Remix).mp3" onclick="my_jukebox.selectPlay(3)">4.	Chela - Zero (Keljet Remix)</li>
+		<li data-src="songs/Avicii - Wake Me Up.mp3" onclick="my_jukebox.selectPlay(4)">5. Avicii - Wake Me Up</li>
 	</ul>
 	<script src="scripts.js" type="text/javascript"></script>
 </body>
