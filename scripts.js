@@ -1,53 +1,3 @@
-// var jukebox = document.querySelector('ul.player');
-// jukebox.addEventListener('click', function(e) {
-// 	var songName = e.target.getAttribute('data-src');
-// 	var audioPlayer = document.querySelector('#player');
-
-// 	if (audioPlayer) {
-
-// 		if (songName === audioPlayer.getAttribute('src')) {
-// 			if (audioPlayer.paused) {
-// 				audioPlayer.play();
-// 				e.target.id = 'playing'
-// 			}
-// 			else {
-// 				audioPlayer.pause();
-// 				e.target.id = 'paused';
-// 			}
-// 		}
-// 		else {
-// 			audioPlayer.src = songName;
-// 			audioPlayer.play();
-// 			if (document.querySelector('#playing')) {
-// 				document.querySelector('#playing').id = '';
-// 				e.target.id = 'playing';
-// 			}
-// 			else {
-// 				document.querySelector('#paused').id = '';
-// 			}
-// 			e.target.id = 'paused';
-// 		}
-
-		
-
-// 	}
-// 	else {
-// 		var audioPlayer = document.createElement('audio');
-// 		audioPlayer.id = 'player';
-// 		e.target.id = 'playing';
-// 		audioPlayer.src = songName;
-// 		document.body.appendChild(audioPlayer);
-// 		audioPlayer.play();
-
-// 		audioPlayer.addEventListener('ended', function() {
-// 			audioPlayer.parentNode.removeChild(audioPlayer);
-// 			e.target.id = '';
-// 		}, false);
-// 	}
-
-	
-// }, false);
-
 function Song(title, artist, url) {
 	this.title = document.getElementById("songTitle").value,
 	this.artist = document.getElementById("songArtist").value,
@@ -64,14 +14,16 @@ function Jukebox() {
 	var audio = document.getElementById("audio");
 	this.playlist = [];
 	var i = 0;
-
+	// play song
 	this.play = function() {
 		audio.setAttribute('src', this.playlist[i])
 		audio.play();
 	}
+	// pause song
 	this.pause = function() {
 		audio.pause();
 	}
+	// next song
 	this.next = function() {
 		
 		if (i < this.playlist.length - 1) {
@@ -82,6 +34,7 @@ function Jukebox() {
 		}
 		this.play();
 	}
+	// previous song
 	this.back = function() {
 		i -= 1
 		if (i = 0) {
@@ -92,6 +45,7 @@ function Jukebox() {
 		}
 		this.play();
 	}
+	// preload songs
 	this.selectPlay = function(y) {
 		audio.setAttribute('src', this.playlist[y]);
 		this.play();
