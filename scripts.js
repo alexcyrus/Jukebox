@@ -50,6 +50,11 @@ function Jukebox() {
 		audio.setAttribute('src', this.playlist[y]);
 		this.play();
 	}
+	// upload song
+	this.upload = function() {
+		var song_name = document.getElementById("song_name");
+		var song_upload = document.getElementById("song_upload");
+	}
 }
 
 var my_jukebox = new Jukebox;
@@ -57,6 +62,8 @@ var play = document.getElementById("play");
 var pause = document.getElementById("pause");
 var next = document.getElementById("next");
 var back = document.getElementById("back");
+var upload = document.getElementById("upload");
+
 play.addEventListener('click', function() {
 	my_jukebox.play()
 });
@@ -68,6 +75,9 @@ next.addEventListener('click', function() {
 });
 back.addEventListener('click', function() {
 	my_jukebox.back()
+});
+upload.addEventListener('click', function() {
+	my_jukebox.upload()
 });
 
 my_jukebox.playlist = ["songs/Doctor P - Tetris.mp3", 
