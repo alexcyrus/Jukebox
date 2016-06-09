@@ -1,4 +1,6 @@
-function Song(title, artist, url) {
+$(document).ready(function() {
+
+	function Song(title, artist, url) {
 	this.title = document.getElementById("songTitle").value,
 	this.artist = document.getElementById("songArtist").value,
 	this.url = document.getElementById("addSong").value
@@ -54,15 +56,19 @@ function Jukebox() {
 	this.upload = function() {
 		var song_name = document.getElementById("song_name");
 		var song_upload = document.getElementById("song_upload");
+
+		this.playlist.push($('#song_upload').val());
+		console.log(this.playlist);
+		
 	}
 }
-
+// event listeners
 var my_jukebox = new Jukebox;
 var play = document.getElementById("play");
 var pause = document.getElementById("pause");
 var next = document.getElementById("next");
 var back = document.getElementById("back");
-var upload = document.getElementById("upload");
+var upload = document.getElementById("upload_icon");
 
 play.addEventListener('click', function() {
 	my_jukebox.play()
@@ -79,9 +85,10 @@ back.addEventListener('click', function() {
 upload.addEventListener('click', function() {
 	my_jukebox.upload()
 });
-
+// pre-loaded playlist
 my_jukebox.playlist = ["songs/Doctor P - Tetris.mp3", 
 			"songs/Tiesto - Red Lights.mp3", 
 			"songs/Deadmau5 - I Remember.mp3", 
 			"songs/Chela - Zero (Keljet Remix).mp3", 
 			"songs/Avicii - Wake Me Up.mp3"]
+})
