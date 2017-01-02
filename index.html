@@ -1,29 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<title>JavaScript Jukebox</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./Styles/Jukebox.css">
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<title>Tarantino Jukebox</title>
 </head>
-<body>
-	<div id="play"><img src="images/play.png"></div>
-	<div id="pause"><img src="images/pause.png"></div>
-	<div id="next"><img src="images/next.png"></div>
-	<div id="back"><img src="images/back.png"></div>
-	<div id="upload">
-		<input type="text" name="song_name" id="song_name"><br>
-		<input type="text" name="song_upload" id="song_upload"><br>
-		<img id="upload_icon" src="images/upload.svg">
-	</div>
-	<audio id="audio" src=""></audio>
-	<ul class="player">
-		<li onclick="my_jukebox.selectPlay(0)">1. Doctor P - Tetris</li>
-		<li onclick="my_jukebox.selectPlay(1)">2.	Tiesto - Red Lights</li>
-		<li onclick="my_jukebox.selectPlay(2)">3. Deadmau5 - I Remember</li>
-		<li onclick="my_jukebox.selectPlay(3)">4.	Chela - Zero (Keljet Remix)</li>
-		<li onclick="my_jukebox.selectPlay(4)">5. Avicii - Wake Me Up</li>
-	</ul>
-	<script src="scripts.js" type="text/javascript"></script>
+<body> 
+
+  <div id="form"> 
+
+    <form id="NewSongForm">
+      <p id="headline">Add your own song below.</p>
+      <br>
+      artist:<br>
+      <input id="artistName" type="text" name="Artist">
+      <br>
+      song title:<br>
+      <input id="songName" type="text" name="Song Title">
+      <br>
+      album art url:<br>
+      <input id="newAlbumArt" type="text" name="Album Art URL">
+      <br>
+      url:<br>
+      <input id="newURL" type="text" name="URL">
+      <button id="submitSong" onclick="jukebox.addSong()" type="button">Submit</button>
+
+    </form>
+
+  </div>
+  
+  <div id="modal">
+  </div>
+
+   
+    <audio id="MyMusic" ontimeupdate="jukebox.updateProgress()" onended="jukebox.next()" src=" " type="audio/mp3">
+    </audio>
+
+    <div id="controls">
+      <span id="play" onclick="jukebox.play()" class="glyphicon glyphicon-play"></span>
+      <br>
+      <span id="pause" onclick="jukebox.pause()" class="glyphicon glyphicon-pause"></span>
+      <br>
+      <span id="next" onclick="jukebox.next()" class="glyphicon glyphicon-forward"></span>
+      <br>
+      <span id="back" onclick="jukebox.back()" class="glyphicon glyphicon-backward"></span>
+      <br>
+      <!-- <span id="shuffle" onclick="jukebox.shuffle()" class="glyphicon glyphicon-random"></span>
+      <br> -->
+      <span id="stop" onclick="jukebox.stop()" class="glyphicon glyphicon-stop"></span>
+      <br>
+      <span id="upload" class="glyphicon glyphicon-upload"></span>
+    </div>
+
+
+    <div id="controls2">
+      <span id="pause" onclick="jukebox.pause()" class="glyphicon glyphicon-pause"></span>
+      <span id="back" onclick="jukebox.back()" class="glyphicon glyphicon-backward"></span>
+      <span id="play" onclick="jukebox.play()" class="glyphicon glyphicon-play"></span>
+      <span id="next" onclick="jukebox.next()" class="glyphicon glyphicon-forward"></span>
+      <!-- <span id="shuffle" onclick="jukebox.shuffle()" class="glyphicon glyphicon-random"></span>
+      <br> -->
+      <span id="stop" onclick="jukebox.stop()" class="glyphicon glyphicon-stop"></span>
+    </div>
+
+    <div id="contentWrapper">
+
+      <div id="infoWrapper">
+        <div id="SongTitle">Tarantino Jukebox</div>
+        <div id="ArtistName">Press Play</div>
+      </div>
+        <img id="AlbumArt" src="http://static.tumblr.com/qmraazf/ps5mjrmim/unknown-album.png"> 
+    </div>
+
+    <img id="AlbumArt2" src="http://static.tumblr.com/qmraazf/ps5mjrmim/unknown-album.png">
+
+    <footer>
+      <progress id="seekbar" value="0" max="1"></progress>
+    </footer>
+
+    
+
+    <!-- <div id="playlist"> </div> -->
+
+<script src="JS/Jukebox.js"></script>
+<script src="JS/jQuery.js"></script>
 </body>
 </html>
