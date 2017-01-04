@@ -44,18 +44,7 @@ var Jukebox = function(){
 		};
 
 
-
-		// this.shuffle = function() {
-		// 	x.setAttribute("src", this.songs[[Math.floor(Math.random() * this.songs.length)]].URL);
-		// 	document.getElementById("SongTitle").innerHTML = this.songs[i].SongTitle;
-		// 	document.getElementById("ArtistName").innerHTML = this.songs[i].Artist;
-		// 	document.getElementById("AlbumArt").setAttribute("src", this.songs[i].AlbumArtURL);
-		// 	x.play();
-		// }
-
-
 		this.next = function() {
-		//Instinct made me want to use a loop for this, but that wasn't correct. 
 			if (i == this.songs.length - 1) {
 				i = 0
 				this.stop()
@@ -63,7 +52,7 @@ var Jukebox = function(){
 				this.play()
 			}
 			else if(i < this.songs.length) {
-				i++ //This means i + 1. Var i will hold the value it's given here
+				i++
 				this.stop()
 				x.setAttribute("src", this.songs[i].URL)
 				this.play()
@@ -73,7 +62,7 @@ var Jukebox = function(){
 
 		this.back = function() {
 			if(i > 0) {
-				i-- //This means i - 1. Var i will hold the value it's given here
+				i--
 				this.stop()
 				x.setAttribute("src", this.songs[i].URL)
 				this.play()
@@ -119,23 +108,6 @@ var Jukebox = function(){
 			this.songs.push(x)
 			document.getElementById("NewSongForm").reset()
 		}
-
-
-		// this.playlist = function() {
-		// 		for (z=0; z<this.songs.length; z++) {
-		// 			var node = document.createElement("li")
-		// 			var node2 = document.createElement("li")
-		// 			var songnode = document.createTextNode(this.songs[z].SongTitle);
-		// 			// songnode.addClass('')
-		// 			var artistnode = document.createTextNode(this.songs[z].Artist);
-		// 			node.appendChild(songnode);
-		// 			node2.appendChild(artistnode);
-		// 			document.getElementById("playlist").appendChild(node);
-		// 			document.getElementById("playlist").appendChild(node2);
-		// 		}
-		// }
-
-
 }
 
 
@@ -147,7 +119,7 @@ var jukebox = new Jukebox();
 
 var DustySpringfield = new Song("Dusty Springfield", "Son of a Preacher Man", "http://images.musictimes.com/data/images/full/39155/pulp-fiction.jpg", "./Music/dusty_springfield.mp3")
 var JohnLegend = new Song("John Legend", "Who Did That to You?", "https://slyvinyl.com/wp-content/uploads/2013/02/django.jpg", "./Music/john_legend.mp3")
-var LuisBacalov = new Song("Luis Bacalov", "Django", "https://slyvinyl.com/wp-content/uploads/2013/02/django.jpg", "./Music/luis_bacalov.mp3")
+var LuisBacalov = new Song("Luis Bacalov & Rocky Roberts", "Django", "https://slyvinyl.com/wp-content/uploads/2013/02/django.jpg", "./Music/luis_bacalov.mp3")
 var NancySinatra = new Song("Nancy Sinatra", "Bang Bang (My Baby Shot Me Down)", "https://images-na.ssl-images-amazon.com/images/I/711YfS6OvkL._SL1448_.jpg", "./Music/nancy_sinatra.mp3")
 var SantaEsmeralda = new Song("Santa Esmeralda", "Don't Let Me Be Misunderstood", "https://images-na.ssl-images-amazon.com/images/I/711YfS6OvkL._SL1448_.jpg", "./Music/santa_esmeralda.mp3")
 var StealersWheel = new Song("Stealers Wheel", "Stuck in the Middle With You", "https://images-na.ssl-images-amazon.com/images/I/81LpLvxabcL._SL1227_.jpg", "./Music/stealers_wheel.mp3")
@@ -164,8 +136,3 @@ jukebox.preload(DustySpringfield);
 jukebox.preload(JohnLegend);
 
 jukebox.load();
-
-// jukebox.playlist();
-
-
-
