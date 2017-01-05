@@ -117,13 +117,13 @@ var jukebox = new Jukebox();
 
 // ----- My Songs ----- \\
 
-var DustySpringfield = new Song("Dusty Springfield", "Son of a Preacher Man", "http://images.musictimes.com/data/images/full/39155/pulp-fiction.jpg", "./Music/dusty_springfield.mp3")
 var JohnLegend = new Song("John Legend", "Who Did That to You?", "https://slyvinyl.com/wp-content/uploads/2013/02/django.jpg", "./Music/john_legend.mp3")
 var LuisBacalov = new Song("Luis Bacalov & Rocky Roberts", "Django", "https://slyvinyl.com/wp-content/uploads/2013/02/django.jpg", "./Music/luis_bacalov.mp3")
 var NancySinatra = new Song("Nancy Sinatra", "Bang Bang (My Baby Shot Me Down)", "https://images-na.ssl-images-amazon.com/images/I/711YfS6OvkL._SL1448_.jpg", "./Music/nancy_sinatra.mp3")
 var SantaEsmeralda = new Song("Santa Esmeralda", "Don't Let Me Be Misunderstood", "https://images-na.ssl-images-amazon.com/images/I/711YfS6OvkL._SL1448_.jpg", "./Music/santa_esmeralda.mp3")
 var StealersWheel = new Song("Stealers Wheel", "Stuck in the Middle With You", "https://images-na.ssl-images-amazon.com/images/I/81LpLvxabcL._SL1227_.jpg", "./Music/stealers_wheel.mp3")
 var TheBrothersJohnson = new Song("The Brothers Johnson", "Strawberry Letter 23", "http://transmissionrecords.co.uk/wp-content/uploads/soundtrack-ost-jackie-brown.jpg", "./Music/the_brothers_johnson.mp3")
+var TheRevels = new Song("The Revels", "Comanche", "http://images.musictimes.com/data/images/full/39155/pulp-fiction.jpg", "./Music/the_revels.mp3")
 var UrgeOverkill = new Song("Urge Overkill", "Girl, You'll Be a Woman Soon", "http://images.musictimes.com/data/images/full/39155/pulp-fiction.jpg", "./Music/urge_overkill.mp3")
 
 jukebox.preload(NancySinatra);
@@ -132,7 +132,7 @@ jukebox.preload(UrgeOverkill);
 jukebox.preload(StealersWheel);
 jukebox.preload(TheBrothersJohnson);
 jukebox.preload(SantaEsmeralda);
-jukebox.preload(DustySpringfield);
+jukebox.preload(TheRevels);
 jukebox.preload(JohnLegend);
 
 jukebox.load();
