@@ -38,12 +38,6 @@ var Jukebox = function(){
 		};
 
 
-		this.updateProgress = function() {
-	    var progressbar = document.getElementById('seekbar');
-	    progressbar.value = (x.currentTime / x.duration);
-		};
-
-
 		this.next = function() {
 			if (i == this.songs.length - 1) {
 				i = 0

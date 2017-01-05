@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<title>Tarantino Jukebox</title>
 </head>
-<body style="background-color: #E8DED5"> 
+<body style="background-color: #F0E7E2">
 
   <div id="form"> 
 
@@ -39,19 +39,7 @@
     <audio id="MyMusic" ontimeupdate="jukebox.updateProgress()" onended="jukebox.next()" src=" " type="audio/mp3">
     </audio>
 
-    <div id="controls">
-      <span id="play" onclick="jukebox.play()" class="glyphicon glyphicon-play"></span>
-      <br>
-      <span id="pause" onclick="jukebox.pause()" class="glyphicon glyphicon-pause"></span>
-      <br>
-      <span id="next" onclick="jukebox.next()" class="glyphicon glyphicon-forward"></span>
-      <br>
-      <span id="back" onclick="jukebox.back()" class="glyphicon glyphicon-backward"></span>
-      <br>
-      <span id="stop" onclick="jukebox.stop()" class="glyphicon glyphicon-stop"></span>
-      <br>
-      <span id="upload" class="glyphicon glyphicon-upload"></span>
-    </div>
+    
 
 
     <div id="controls2">
@@ -67,11 +55,21 @@
       <div id="infoWrapper">
         <div id="SongTitle">Tarantino Jukebox</div>
         <div id="ArtistName">Press Play</div>
+
+        <div id="controls">
+          <span id="pause" onclick="jukebox.pause()" class="glyphicon glyphicon-pause"></span>
+          <span id="back" onclick="jukebox.back()" class="glyphicon glyphicon-backward"></span>
+          <span id="play" onclick="jukebox.play()" class="glyphicon glyphicon-play"></span>
+          <span id="next" onclick="jukebox.next()" class="glyphicon glyphicon-forward"></span>
+          <span id="stop" onclick="jukebox.stop()" class="glyphicon glyphicon-stop"></span>
+          <span id="upload" class="glyphicon glyphicon-upload"></span>
+        </div>
       </div>
         <img id="AlbumArt" src="http://images.8tracks.com/cover/i/000/159/718/Tarantino-quentin-tarantino-32312073-926-1239-128.jpg?rect=37,41,863,863&q=98&fm=jpg&fit=max&w=640&h=640"> 
     </div>
 
     <img id="AlbumArt2" src="http://images.8tracks.com/cover/i/000/159/718/Tarantino-quentin-tarantino-32312073-926-1239-128.jpg?rect=37,41,863,863&q=98&fm=jpg&fit=max&w=640&h=640">
+
 
     <footer>
 
