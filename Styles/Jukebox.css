@@ -150,7 +150,7 @@ footer {
 
 
 #play:hover {
-	border: 1px solid #E6323B;
+	/*border: 1px solid #E6323B;*/
 	color: #E6323B;
 }
 
@@ -168,7 +168,7 @@ footer {
 }
 
 #pause:hover {
-	border: 1px solid #E6323B;
+	/*border: 1px solid #E6323B;*/
 	color: #E6323B;
 }
 
@@ -185,7 +185,7 @@ footer {
 }
 
 #back:hover {
-	border: 1px solid #E6323B;
+	/*border: 1px solid #E6323B;*/
 	color: #E6323B;
 }
 
@@ -202,7 +202,7 @@ footer {
 }
 
 #next:hover {
-	border: 1px solid #E6323B;
+	/*border: 1px solid #E6323B;*/
 	color: #E6323B;
 }
 
@@ -219,7 +219,7 @@ footer {
 }
 
 #stop:hover {
-	border: 1px solid #E6323B;
+	/*border: 1px solid #E6323B;*/
 	color: #E6323B;
 }
 
@@ -230,6 +230,7 @@ footer {
 	font-size: 50px;
 	padding-top: 7.46px;
 	margin-top: 20px;
+	margin-left: 40px;
 }
 
 #upload:hover {
